@@ -34,5 +34,6 @@ public class facebookXpath {
 	
 	Go back to parent from child = //*[@id='tablist1-tab1']/parent::ul   This is only in Xpath. Cant in cssSelector
 	
+	Xpath using text = //*[@text()=' Selenium ']
 	
 */
