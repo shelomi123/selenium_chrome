@@ -28,8 +28,11 @@ public class facebookXpath {
 /*
 	Relative Xpath=  Does not depend on parent nodes.. This way is good cuz it directly jumps
 	Absolute Xpath=  ex:  //section/div/div/ul/li[2]
-						  //div[@class='list-c']/div/div[2]/input
+						  //div[@class='list-c']/div/div[2]/input 
+						   
 	Identify ur sibling = //*[@id='tablist1-tab1']/following-sibling::li[1]
 	
 	Go back to parent from child = //*[@id='tablist1-tab1']/parent::ul   This is only in Xpath. Cant in cssSelector
+	
+	
 */
