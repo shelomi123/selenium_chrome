@@ -14,7 +14,14 @@ public class dropDownUpdated {
 		
 		
 		driver.findElement(By.id("divpaxinfo")).click();
-		
+		try {
+			Thread.sleep(2000L);
+			Select s1 = new Select(driver.findElement(By.id("ctl00_mainContent_ddl_Adult")));
+			s1.deselectByValue("6");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Select s1 = new Select(driver.findElement(By.id("ctl00_mainContent_ddl_Adult")));
 		s1.selectByIndex(6);
 		Select s2 = new Select(driver.findElement(By.id("ctl00_mainContent_ddl_Child")));
