@@ -16,6 +16,8 @@ public class dynamicDropDown {
 		driver.findElement(By.xpath("//a[@value='GOI']")).click();
 		
 		driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT")).click();
+		
+		//this xpath shows two elements so select the second xpath
 		driver.findElement(By.xpath("(//a[@value='GWL'])[2]")).click();
 		
 		
