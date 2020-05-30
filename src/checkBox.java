@@ -22,6 +22,7 @@ public static void main(String []args) {
 		a.click();
 		
 		//System.out.println(a.isSelected());
+		Assert.assertEquals(driver.findElements(By.cssSelector("[type='checkbox']")).size(), 6);
 		System.out.println(driver.findElements(By.cssSelector("[type='checkbox']")).size());
 		
 		//expect true , if the condition is true code continue
