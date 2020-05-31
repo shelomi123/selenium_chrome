@@ -34,6 +34,11 @@ public class dynamicDropDown {
 		 
 		 */
 		
+		//calender selecting current date
+		driver.findElement(By.cssSelector(".ui-state-default ui-state-highlight ui-state-active")).click();
+		
+		
+		
 		
 		
 	}
