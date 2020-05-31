@@ -61,7 +61,7 @@ child.selectByValue("2");
 Select infant = new Select(driver.findElement(By.id("Infants")));
 
 infant.selectByValue("3");
-
+g
 //link
 
 driver.findElement(By.id("MoreOptionsLink")).click();
