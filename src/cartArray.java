@@ -19,7 +19,7 @@ public class cartArray {
 		List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
 		
 		for(int i=0; i<products.size();i++) {
-			
+			//
 			
 			String[] name= products.get(i).getText().split("-");
 			String formattedName = name[0].trim();
