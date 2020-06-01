@@ -8,13 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class cartArray {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver_win32 (1)\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
 		String vegesNeeded[]= {"Cucumber","Beetroot"};
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		Thread.sleep(3000L);
 
 		List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
 		
@@ -31,8 +32,8 @@ public class cartArray {
 			int j=0;
 			if(vegeList.contains(formattedName)) {
 				j++;
-				driver.findElements(By.xpath("//button[@type='button']")).get(i).click();
-				if(j==2)
+				driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
+				if(j==vegesNeeded.length)
 					break;
 			}
 		}
