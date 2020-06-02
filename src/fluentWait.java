@@ -31,6 +31,9 @@ public static void main(String []args) {
 					return driver.findElement(By.cssSelector("#results"));
 			}
 		});
+		
+		System.out.println(driver.findElement(By.xpath("//a[@href='javascript: void(0);loadAjax();']")).isDisplayed());
+		//driver.findElement(By.xpath("//a[@href='javascript: void(0);loadAjax();']")).isDisplayed();
 		//WebDriverWait d = new WebDriverWait(driver, 8);
 		//d.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#results")));
 		//System.out.println(driver.findElement(By.cssSelector("#results")).getText());
