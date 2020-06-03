@@ -21,6 +21,9 @@ public static void main(String []args) {
 		Actions a = new Actions(driver);
 		a.dragAndDrop(box, target).build().perform();
 		
+		//To come outside the frame 
+		driver.switchTo().defaultContent();
+		
 		// frame path :   //div[@id='content']/iframe
 	}
 }
