@@ -12,8 +12,10 @@ public static void main(String []args) {
 		WebDriver driver= new ChromeDriver();
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		//calculate links on page
 		System.out.println(driver.findElements(By.tagName("a")).size());
 	
+		//calculate links only in footer
 		WebElement minidriver = driver.findElement(By.id("gf-BIG"));
 		System.out.println(minidriver.findElements(By.tagName("a")).size());
 		
