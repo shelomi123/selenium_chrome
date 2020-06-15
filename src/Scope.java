@@ -27,9 +27,10 @@ public static void main(String []args) throws InterruptedException {
 		
 		//click all links inside microdriver
 		for(int i=1;i<microdriver.findElements(By.tagName("a")).size();i++) {
+			
 			String clickOnLink = Keys.chord(Keys.CONTROL,Keys.ENTER);
-			microdriver.findElements(By.tagName("a")).get(i).sendKeys("cliclOnLink");
-			Thread.sleep(8000L);
+			microdriver.findElements(By.tagName("a")).get(i).sendKeys(clickOnLink);
+			Thread.sleep(5000L);
 		}
 		
 	}
