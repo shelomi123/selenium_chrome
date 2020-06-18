@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class assignment6 {
-	public static void main(String []args) throws InterruptedException {
+	public static void main(String []args){
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver_win32 (1)\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
