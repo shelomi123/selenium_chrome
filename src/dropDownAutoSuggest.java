@@ -30,11 +30,23 @@ public class dropDownAutoSuggest {
 		String text = (String) js.executeScript(script);
 		System.out.println(text);
 		
+		int i=0;
 		while(!text.equalsIgnoreCase("BENGALUgRU AIRPORT")) {
 			driver.findElement(By.id("fromPlaceName")).sendKeys(Keys.DOWN);
-			
+			i++;
 			text = (String) js.executeScript(script);
 			System.out.println(text);
+			if(i>10) {
+				break;
+			}
+			
+		}
+		
+		if(i>10) {
+			System.out.println("Element not found");
+		}
+		else {
+			System.out.println("Element found");
 		}
 	}
 }
