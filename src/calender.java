@@ -7,25 +7,34 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class calender {
-	public static void main(String []args) {
+	public static void main(String []args) throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver_win32 (1)\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
-		
-		//driver.findElementByXPath(".//*[@id='travel_date']").click();
-		//driver.findElement(".//*[@id='travel_date']").click();
 
 		driver.get("https://www.path2usa.com/travel-companions");
+		Thread.sleep(4000L);
 		
-		//driver.findElement(By.xpath("//input[@id='travel_date']")).click();
+		driver.findElement(By.xpath("//*[@id='travel_date']")).click();
 		
-		//driver.findElement(By.cssSelector("#travel_date")).click();
+		WebElement month = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[@class='datepicker-switch']"));
 		
-		List<WebElement> a = driver.findElements(By.cssSelector(".day"));
 		
-		for(int i=0; i<=a.size();i++) {
-			if(i==23) {
-				a.get(i).click();
+		//select August
+		while(!month.getText().contains("August")) {
+			driver.findElement(By.xpath("//div[@class='datepicker-days']//th[@class='next']")).click();
+		}
+		
+		//Grab the common attribute Put it into a list Then iterate
+		List<WebElement> dates = driver.findElements(By.className("day"));
+		
+		//select 23
+		for(int i=0; i<=dates.size();i++) {
+			String text = driver.findElements(By.className("day")).get(i).getText();
+			if(text.equalsIgnoreCase("23")) {
+				//driver.findElement(By.xpath("//*[text()='23']")).click();
+				driver.findElements(By.className("day")).get(i).click();
+				break;
 			}
 		}
 	}
