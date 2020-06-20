@@ -15,21 +15,22 @@ public class assignment8 {
 
 		driver.findElement(By.id("autocomplete")).sendKeys("ind");
 		Thread.sleep(4000L);
-		driver.findElement(By.id("autocomplete")).sendKeys(Keys.DOWN);
-
+		
+		//Javascript 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		String script = "return document.getElementById(\"fromPlaceName\").value;";
+		String script = "return document.getElementById(\"autocomplete\").value;";
 		String text = (String) js.executeScript(script);
-		System.out.println(text);
+		
 
 		int i = 0;
+		
 		while (!text.equalsIgnoreCase("India")) {
-			driver.findElement(By.id("fromPlaceName")).sendKeys(Keys.DOWN);
+			driver.findElement(By.id("autocomplete")).sendKeys(Keys.DOWN);
 			i++;
-			script = "return document.getElementById(\"fromPlaceName\").value;";
+			script = "return document.getElementById(\"autocomplete\").value;";
 			text = (String) js.executeScript(script);
-			System.out.println(text);
+			//System.out.println(text);
 			if (i > 10) {
 				break;
 			}
@@ -37,9 +38,9 @@ public class assignment8 {
 		}
 
 		if (i > 10) {
-			System.out.println("Element not found");
+			System.out.println("Element "+text+" not found");
 		} else {
-			System.out.println("Element found");
+			System.out.println("Element " +text+"  found");
 		}
 
 	}
