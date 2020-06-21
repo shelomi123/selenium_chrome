@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="C:/selenium/commons-io-2.7/commons-io-2.7-sources.jar"/>
 	<classpathentry kind="lib" path="C:/selenium/commons-io-2.7/commons-io-2.7-tests.jar"/>
 	<classpathentry kind="lib" path="C:/selenium/commons-io-2.7/commons-io-2.7-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/java-client-7.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
